@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+    php:
+      container_name: php
+      build:
+        context: .
+        dockerfile: docker/backend/Dockerfile
+      restart: always
+      depends_on:
+        - mysql
+      ports:
+        - "8000:8000"
+      networks:
+        - symfony
+
+    nginx:
+      container_name: nginx
+      image: nginx:latest
+      volumes:
+        - .:/var/www/html/symfony_app/
+        - ./nginx/conf.d:/etc/nginx/conf.d
+      ports:
+        - "80:80"
+        - "443:443"
+      restart: on-failure
+      depends_on:
+        - php
+      networks:
+        - symfony
+
+    mysql:
+      container_name: mysql
+      build:
+        context: .
+        dockerfile: docker/database/Dockerfile
+      restart: on-failure
+      ports:
+        - "3306:3306"
+      volumes:
+        - db-data:/var/lib/mysql
+      networks:
+        - symfony
+
+    adminer:
+        image: adminer
+        restart: on-failure
+        ports:
+          - "8080:8080"
+        depends_on:
+          - mysql
+        networks:
+          - symfony
+
+volumes:
+  db-data:
+
+networks:
+  symfony:
+    driver: bridge
