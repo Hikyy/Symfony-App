@@ -22,7 +22,7 @@ Assurez-vous d'avoir installé les outils suivants sur votre machine avant de co
 - Docker
 - Docker Compose
 
-## Information
+## Informations
 
 La base du squelette symfony a été construit en suivant la documentation de symfony.
 
@@ -37,29 +37,32 @@ Je vous renvoie vers celle-ci : [Symfony Skeleton](https://symfony.com/doc/curre
    ```bash
    git clone git@github.com:Hikyy/Symfony-App.git
    ```
+
+2. Allez dans le directory :
+
     ```bash
     cd Symfony-App
     ```
 
-2. Construisez et démarrez les conteneurs Docker :
+3. Construisez et démarrez les conteneurs Docker :
 
     ```bash
     docker compose up -d --build
     ```
 
-3. Installez les dépendances Symfony en accédant au conteneur PHP :
+4. Installez les dépendances Symfony en accédant au conteneur PHP :
 
     ```bash
     docker compose exec php composer install
     ```
 
-4. Lancez le serveur Symfony :
+5. Lancez le serveur Symfony :
   
     ```bash
       docker compose exec php symfony serve --allow-http
     ```
 
-5. Pour accéder à la page de démarrage de Symfony :
+6. Pour accéder à la page de démarrage de Symfony :
 
     ```bash
       localhost:8000
