@@ -2,7 +2,7 @@
 
 ## Description
 
-Ceci est un exemple de projet Symfony dockerisé, configuré pour être accessible sur `localhost:8080`. 
+Ceci est un exemple de projet Symfony dockerisé, configuré pour être accessible sur `localhost:8000`. 
 
 L'application utilise Docker et Docker Compose pour faciliter le déploiement et la gestion des dépendances.
 
@@ -12,7 +12,7 @@ L'application utilise Docker et Docker Compose pour faciliter le déploiement et
 - [Docker](https://www.docker.com/): Une plateforme open-source pour automatiser le déploiement d'applications dans des conteneurs.
 - [Nginx](https://www.nginx.com/): Un serveur web léger et rapide, utilisé ici comme serveur HTTP.
 - [MariaDB](https://mariadb.org/): Un système de gestion de base de données relationnelles.
-- [Adminer](https://www.adminer.org/): Un outil de gestion de base de données, accessible sur [http://localhost:8080](http://localhost:8080).
+- [Adminer](https://www.adminer.org/): Un outil de gestion de base de données, accessible sur [http://localhost:1333](http://localhost:1333).
 
 
 ## Prérequis
