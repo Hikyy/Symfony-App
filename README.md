@@ -22,11 +22,13 @@ Assurez-vous d'avoir installé les outils suivants sur votre machine avant de co
 - Docker
 - Docker Compose
 
-## Prérequis
+## Information
 
 La base du squelette symfony a été construit en suivant la documentation de symfony.
 
 Je vous renvoie vers celle-ci : [Symfony Skeleton](https://symfony.com/doc/current/setup.html)
+
+#### Exceptionnellement, le fichier `.env` a été partagé, et égalemment les variables de connection à la database pour une prise en main de l'application plus simple.
 
 ## Installation
 
