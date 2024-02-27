@@ -30,7 +30,7 @@ services:
         - symfony
 
     mysql:
-      container_name: mysql
+      container_name: database
       build:
         context: .
         dockerfile: docker/database/Dockerfile
@@ -46,7 +46,7 @@ services:
         image: adminer
         restart: on-failure
         ports:
-          - "8080:8080"
+          - "1333:8080"
         depends_on:
           - mysql
         networks:

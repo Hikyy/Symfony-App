@@ -1,5 +1,6 @@
-FROM mariadb:11.4.1-rc
-ENV MYSQL_DATABASE: symfony
-ENV MYSQL_ROOT_PASSWORD: root
-ENV MYSQL_ROOT_: root
+FROM mariadb:latest
+
+ENV MYSQL_ROOT_PASSWORD=password
+ENV MYSQL_DATABASE=symfony_db
+
 COPY ../../database/init.sql /docker-entrypoint-initdb.d/
